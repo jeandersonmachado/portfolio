@@ -1,0 +1,224 @@
+.about_me {
+    margin-top: -8rem;
+    margin-left: 7%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+.about_me p:first-of-type {
+    margin-top: 6rem;
+    font-size: 4.5rem;
+    font-family: "Grand";
+    color: antiquewhite;
+}
+.about_me p:nth-of-type(2) {
+    margin-bottom: 3rem;
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-family: "Grand";
+}
+
+.about_me div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 2.6rem;
+    /* width: 100px;
+    height: 100px; */
+    background-color: antiquewhite;
+    border-radius: 50px;
+}
+.about_me div:hover {
+    /* transform: scale(1.1)
+    transition: 0.5s ease; */
+    cursor: pointer;
+}
+.about_me div p:first-of-type {
+    font-size: 1rem;
+    margin: 0;
+    color: black;
+    font-weight: 700;
+    font-family: "Grand";
+}
+
+.about_me span:first-of-type {
+    border-radius: 20px;
+    width: 6.25rem;
+    height: 0.275rem;
+    background-color: purple;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    animation: p 500ms ease 600ms;
+}
+.about_me span:nth-of-type(2) {
+    border-radius: 20px;
+    width: 6.25rem;
+    height: 0.275rem;
+    background-color: purple;
+    margin-bottom: 3rem;
+    margin-left: 8%;
+    animation: p 300ms ease 600ms;
+}
+
+.moon {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    // left: 23%;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#scene {
+    position: relative;
+    height: 543px;
+    width: 543px;
+    display: flex;
+}
+.moon__img {
+    position: relative;
+    left: 100%;
+    top: 120px;
+    z-index: 400;
+    width: 300px;
+    height: 300px;
+    background-color: #090022;
+    border-radius: 50%;
+    border: 1.5px solid #ffffff;
+    box-shadow: unset;
+}
+
+.moon__img div:first-of-type {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1.5px solid #606060;
+    position: absolute;
+    left: 15%;
+    top: 25%;
+}
+
+.moon__img div:nth-of-type(2) {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1.5px solid #606060;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+}
+
+.moon__img div:nth-of-type(3) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1.5px solid #606060;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+}
+
+.cloud {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+img {
+    width: 400px;
+    height: auto;
+}
+.cloud--front1 {
+    @include position-cloud(-90px, 450px);
+}
+
+.cloud--front2 {
+    top: -100px;
+    left: -350px;
+    @include position-cloud(70px, 100px);
+}
+
+.cloud--front3 {
+    @include position-cloud(170px, 300px);
+}
+.cloud--back1 {
+    @include position-cloud(-170px, 320px);
+    z-index: 1;
+}
+.cloud--back2 {
+    top: -90px;
+    left: 120px;
+    z-index: 1;
+}
+
+.fp-section.active .animatedmoon {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 0 0 2.5em rgba(255, 255, 255, 0.064),
+        0 0 0 5em rgba(255, 255, 255, 0.043),
+        0 0 0 7.5em rgba(255, 255, 255, 0.03),
+        0 0 0 10em rgba(255, 255, 255, 0.021),
+        0 0 0 12.5em rgba(255, 255, 255, 0.023),
+        0 0 0 15em rgba(255, 255, 255, 0.01);
+}
+
+.name_container {
+    top: 35%;
+    left: 7%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.name_container p {
+    font-family: "Grand";
+    color: antiquewhite;
+    font-size: 1.5rem;
+    animation: p 500ms ease 500ms;
+}
+
+.name_container h1 {
+    font-family: "Grand";
+    font-weight: 300;
+    color: antiquewhite;
+    font-size: 3.5rem;
+    animation: p 500ms ease 600ms;
+    z-index: 5;
+}
+.name_container span:first-of-type {
+    border: 1px solid purple;
+    border-radius: 20px;
+    width: 90px;
+    height: 6px;
+    background-color: purple;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    animation: p 500ms ease 700ms;
+}
+
+.name_container span:nth-of-type(2) {
+    border: 1px solid purple;
+    border-radius: 20px;
+    width: 90px;
+    height: 6px;
+    background-color: purple;
+    margin-bottom: 2rem;
+    margin-left: 20%;
+    animation: p 500ms ease 750ms;
+}
+.name_container h2 {
+    font-family: "Grand";
+    font-weight: 100;
+    color: antiquewhite;
+    font-size: 1.5rem;
+    animation: p 500ms ease 600ms;
+}

@@ -1,0 +1,221 @@
+@import "../scss/functions.scss";
+
+.moon {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 1380px;
+    height: 100vh;
+    left: 29.5%;
+    align-items: center;
+    justify-content: center;
+}
+
+#scene {
+    position: relative;
+    height: 543px;
+    width: 543px;
+}
+
+.moon__img div:first-of-type {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2.5px solid #606060;
+    position: absolute;
+    left: 15%;
+    top: 35%;
+}
+
+.moon__img div:nth-of-type(2) {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2.5px solid #606060;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+}
+
+.moon__img div:nth-of-type(3) {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2.5px solid #606060;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+}
+
+.cloud {
+    width: 543px;
+    height: 543px;
+    position: absolute;
+}
+img {
+    width: 700px;
+    height: auto;
+}
+.cloud--front1 {
+    @include position-cloud(-450px, 250px);
+}
+
+.cloud--front2 {
+    top: -100px;
+    left: -350px;
+    @include position-cloud(-100px, -350px);
+}
+
+.cloud--front3 {
+    @include position-cloud(0px, 100px);
+}
+.cloud--back1 {
+    @include position-cloud(-450px, -350px);
+    z-index: 1;
+}
+.cloud--back2 {
+    top: -500px;
+    left: 100px;
+    z-index: 1;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translate3d(30vw, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.load1 {
+    transform: translate3d(30vw, 0, 0);
+    animation: animate1 600ms ease-out;
+    transition: 600ms ease-out;
+    animation-delay: 0.5s;
+}
+
+.fp-section.active .animated1 {
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translate3d(30vw, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.load2 {
+    transform: translate3d(30vw, 0, 0);
+    animation: animate2 600ms ease-out;
+    transition: 600ms ease-out;
+    animation-delay: 0.5s;
+}
+
+.fp-section.active .animated2 {
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translate3d(30vw, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.load3 {
+    transform: translate3d(30vw, 0, 0);
+    animation: animate3 600ms ease-out;
+    transition: 600ms ease-out;
+    animation-delay: 0.5s;
+}
+
+.fp-section.active .animated3 {
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translate3d(30vw, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.load4 {
+    transform: translate3d(30vw, 0, 0);
+    animation: animate4 600ms ease-out;
+    transition: 600ms ease-out;
+    animation-delay: 0.5s;
+}
+
+.fp-section.active .animated4 {
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes animate5 {
+    0% {
+        transform: translate3d(30vw, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.load5 {
+    transform: translate3d(30vw, 0, 0);
+    animation: animate5 600ms ease-out;
+    transition: 600ms ease-out;
+    animation-delay: 0.5s;
+}
+
+.fp-section.active .animated5 {
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes animatemoon {
+    0% {
+        transform: translate3d(30vw, 0, 0);
+        box-shadow: none;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.loadmoon {
+    transform: translate3d(30vw, 0, 0);
+    animation: animatemoon 700ms ease-out;
+    transition: 1000ms ease;
+    animation-delay: 0.5s;
+}
+.fp-section.active .animatedmoon {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 0 0 4em rgba(255, 255, 255, 0.064),
+        0 0 0 8em rgba(255, 255, 255, 0.043),
+        0 0 0 12em rgba(255, 255, 255, 0.03),
+        0 0 0 16em rgba(255, 255, 255, 0.021),
+        0 0 0 20em rgba(255, 255, 255, 0.023),
+        0 0 0 24em rgba(255, 255, 255, 0.01);
+}
+
+.moon__img {
+    position: absolute;
+    z-index: 400;
+    width: 543px;
+    height: 543px;
+    background-color: #090022;
+    border-radius: 50%;
+    border: 2.5px solid #ffffff;
+    box-shadow: unset;
+}
+/* .animatedmoon {
+    transform: translate3d(30vw, 0, 0);
+    transition: all 1000ms ease-out;
+    box-shadow: unset;
+} */
+
+.fp-watermark {
+    display: none;
+}

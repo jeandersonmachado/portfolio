@@ -1,0 +1,201 @@
+body {
+    background: rgb(64, 5, 224);
+    /* background: #1e2125; */
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0 20px;
+    z-index: 999;
+    margin-top: 0;
+}
+#menu_container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: unset;
+}
+.moon {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 480px;
+    height: 100vh;
+    left: 2%;
+    align-items: center;
+    justify-content: center;
+}
+.fp-section.active .animatedmoon {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 0 0 1.5em rgba(255, 255, 255, 0.064),
+        0 0 0 3em rgba(255, 255, 255, 0.043),
+        0 0 0 4.5em rgba(255, 255, 255, 0.03),
+        0 0 0 6em rgba(255, 255, 255, 0.021),
+        0 0 0 7.5em rgba(255, 255, 255, 0.023),
+        0 0 0 9em rgba(255, 255, 255, 0.01);
+}
+.moon__img div:first-of-type {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #606060;
+    position: absolute;
+    left: 15%;
+    top: 30%;
+}
+
+.moon__img div:nth-of-type(2) {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #606060;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+}
+
+.moon__img div:nth-of-type(3) {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #606060;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+}
+.slide_img_container .slide_img div {
+    display: inline-block;
+    position: relative;
+    width: 30em;
+    height: 30em;
+}
+.section_img_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    white-space: nowrap;
+    overflow: hidden;
+}
+.slide_img_container .slide_img div p {
+    font-family: "Grand";
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 10rem;
+    color: #6060603c;
+    font-weight: 900;
+}
+
+/* .slide_img {
+    display: inline-block;
+    animation: 100s slide infinite linear;
+} */
+
+.animated02 {
+    transform: translateX(10vw) scale(0.8);
+    transition: transform 1.3s ease-out;
+}
+
+.fp-section.active .animated02 {
+    transform: translateX(0) scale(1);
+}
+.moon__img {
+    position: absolute;
+    left: 30px;
+    z-index: 400;
+    width: 250px;
+    height: 250px;
+    background-color: #090022;
+    border-radius: 50%;
+    border: unset;
+    box-shadow: unset;
+}
+.cloud {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+}
+img {
+    width: 300px;
+    height: auto;
+}
+.cloud--front1 {
+    @include position-cloud(-160px, 150px);
+}
+
+.cloud--front2 {
+    @include position-cloud(-0px, -100px);
+}
+.cloud--front3 {
+    @include position-cloud(30px, 100px);
+}
+.cloud--back1 {
+    @include position-cloud(-170px, -120px);
+    z-index: 1;
+}
+.cloud--back2 {
+    @include position-cloud(-200px, 120px);
+    z-index: 1;
+}
+.name_container {
+    top: 60%;
+    left: 15%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.name_container p {
+    font-family: "Grand";
+    color: antiquewhite;
+    font-size: 1rem;
+    animation: p 500ms ease 500ms;
+}
+
+.name_container h1 {
+    font-family: "Grand";
+    font-weight: 200;
+    color: antiquewhite;
+    font-size: 2.5rem;
+    animation: p 500ms ease 600ms;
+}
+.name_container span:first-of-type {
+    border: 1px solid purple;
+    border-radius: 20px;
+    width: 60px;
+    height: 2px;
+    background-color: purple;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    animation: p 500ms ease 700ms;
+}
+
+.name_container span:nth-of-type(2) {
+    border: 1px solid purple;
+    border-radius: 20px;
+    width: 60px;
+    height: 2px;
+    background-color: purple;
+    margin-bottom: 1rem;
+    margin-left: 20%;
+    animation: p 500ms ease 750ms;
+}
+.name_container h2 {
+    font-family: "Grand";
+    font-weight: 100;
+    color: antiquewhite;
+    font-size: 1rem;
+    animation: p 500ms ease 600ms;
+}
