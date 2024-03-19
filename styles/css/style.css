@@ -296,22 +296,6 @@ header {
   cursor: pointer;
 }
 
-#menu_container:hover #first_span {
-  transform: translate(0px);
-}
-
-#menu_container:hover #third_span {
-  transform: translate(0px);
-}
-
-#span_container:hover #first_span {
-  transform: translate(0px);
-}
-
-#span_container:hover #third_span {
-  transform: translate(0px);
-}
-
 .circle {
   opacity: 0;
   border: 1px solid white;
@@ -830,7 +814,30 @@ header {
     animation: p 500ms ease 600ms;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  #cursorBorder {
+    --size: 40px;
+    position: absolute;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 2px solid #606060;
+    pointer-events: none;
+    z-index: 20000;
+    transition: none;
+    display: none;
+  }
+  #span_wrapper span {
+    font-family: "Grand";
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding-right: 0px;
+    margin-left: 50px;
+  }
   .about_me {
     margin-top: -8rem;
     margin-left: 7%;
@@ -1038,18 +1045,36 @@ header {
     animation: p 500ms ease 600ms;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .about_me p:first-of-type {
-    margin-top: 6rem;
-    font-size: 6rem;
-    font-family: "Grand";
-    color: antiquewhite;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #menu_container:hover #first_span {
+    transform: translate(-30px);
   }
-}
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #menu_container:hover #third_span {
+    transform: translate(-30px);
+  }
+  #span_container:hover #first_span {
+    transform: translate(-30px);
+  }
+  #span_container:hover #third_span {
+    transform: translate(-30px);
+  }
+  #cursorBorder {
+    --size: 40px;
+    position: absolute;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 2px solid #606060;
+    pointer-events: none;
+    z-index: 20000;
+    transition: none;
+    display: none;
+  }
   .about_me p:first-of-type {
     margin-top: 6rem;
-    font-size: 8rem;
+    font-size: 7rem;
     font-family: "Grand";
     color: antiquewhite;
   }

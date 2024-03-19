@@ -1,3 +1,27 @@
+#cursorBorder {
+    --size: 40px;
+    position: absolute;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 2px solid #606060;
+    pointer-events: none;
+    z-index: 20000;
+    transition: none;
+    display: none;
+}
+
+#span_wrapper span {
+    font-family: "Grand";
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding-right: 0px;
+    margin-left: 50px;
+}
 .about_me {
     margin-top: -8rem;
     margin-left: 7%;
