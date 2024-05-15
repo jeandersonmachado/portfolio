@@ -1,12 +1,21 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "type": "module",
+    "name": "portfolio",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Jeanderson-Machado/Portfolio.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Jeanderson-Machado/Portfolio/issues"
+    },
+    "homepage": "https://github.com/Jeanderson-Machado/Portfolio#readme",
+    "description": ""
 }

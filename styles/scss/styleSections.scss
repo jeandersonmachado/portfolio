@@ -17,6 +17,11 @@
     height: 543px;
     width: 543px;
 }
+.back_scene {
+    position: relative;
+    height: 543px;
+    width: 543px;
+}
 
 .moon__img div:first-of-type {
     width: 100px;
@@ -177,7 +182,7 @@ img {
 
 @keyframes animatemoon {
     0% {
-        transform: translate3d(30vw, 0, 0);
+        transform: translate3d(40vw, 0, 0);
         box-shadow: none;
     }
     100% {
@@ -185,19 +190,19 @@ img {
     }
 }
 .loadmoon {
-    transform: translate3d(30vw, 0, 0);
+    transform: translate3d(40vw, 0, 0);
     animation: animatemoon 700ms ease-out;
     transition: 1000ms ease;
     animation-delay: 0.5s;
 }
 .fp-section.active .animatedmoon {
     transform: translate3d(0, 0, 0);
-    box-shadow: 0 0 0 4em rgba(255, 255, 255, 0.064),
-        0 0 0 8em rgba(255, 255, 255, 0.043),
-        0 0 0 12em rgba(255, 255, 255, 0.03),
-        0 0 0 16em rgba(255, 255, 255, 0.021),
-        0 0 0 20em rgba(255, 255, 255, 0.023),
-        0 0 0 24em rgba(255, 255, 255, 0.01);
+    // box-shadow: 0 0 0 4em rgba(255, 255, 255, 0.064),
+    //     0 0 0 8em rgba(255, 255, 255, 0.043),
+    //     0 0 0 12em rgba(255, 255, 255, 0.03),
+    //     0 0 0 16em rgba(255, 255, 255, 0.021),
+    //     0 0 0 20em rgba(255, 255, 255, 0.023),
+    //     0 0 0 24em rgba(255, 255, 255, 0.01);
 }
 
 .moon__img {
@@ -207,15 +212,35 @@ img {
     height: 543px;
     background-color: #090022;
     border-radius: 50%;
-    border: 2.5px solid #ffffff;
+    border: 3px solid #606060;
     box-shadow: unset;
 }
-/* .animatedmoon {
-    transform: translate3d(30vw, 0, 0);
-    transition: all 1000ms ease-out;
-    box-shadow: unset;
-} */
+#moon__img_shadow {
+    position: fixed;
+    // z-index: 400;
+    width: 543px;
+    height: 543px;
+    background-color: #352e4a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4em rgba(255, 255, 255, 0.064),
+        0 0 0 8em rgba(255, 255, 255, 0.043),
+        0 0 0 12em rgba(255, 255, 255, 0.03),
+        0 0 0 16em rgba(255, 255, 255, 0.021),
+        0 0 0 20em rgba(255, 255, 255, 0.023),
+        0 0 0 24em rgba(255, 255, 255, 0.01);
+}
 
+.shadow_moon {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 1380px;
+    height: 100vh;
+    left: 29.5%;
+    align-items: center;
+    justify-content: center;
+}
 .fp-watermark {
     display: none;
 }

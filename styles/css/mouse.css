@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+.mouse-container > p {
+  margin-top: 1rem;
+  font-family: "Cabin", sans-serif;
+  letter-spacing: 12px;
+  text-indent: 12px;
+  color: rgb(234, 234, 234);
+  animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
+}
+
+.mouse {
+  background: #4e5559 linear-gradient(transparent 0%, transparent 50%, rgb(234, 234, 234) 50%, rgb(234, 234, 234) 100%);
+  width: 2.125rem;
+  height: 3.625rem;
+  border-radius: 100px;
+  background-size: 100% 200%;
+  animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+}
+.mouse:before, .mouse:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.mouse:before {
+  width: 1.875rem;
+  height: 3.375rem;
+  background-color: #020b16;
+  border-radius: 100px;
+}
+.mouse:after {
+  background-color: rgb(234, 234, 234);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  animation: trackBallSlide 5s linear infinite;
+}
+
+@keyframes colorSlide {
+  0% {
+    background-position: 0% 100%;
+  }
+  20% {
+    background-position: 0% 0%;
+  }
+  21% {
+    background-color: #4e5559;
+  }
+  29.99% {
+    background-color: rgb(234, 234, 234);
+    background-position: 0% 0%;
+  }
+  30% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  51% {
+    background-color: #4e5559;
+  }
+  59% {
+    background-color: rgb(234, 234, 234);
+    background-position: 0% 0%;
+  }
+  60% {
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  80% {
+    background-position: 0% 0%;
+  }
+  81% {
+    background-color: #4e5559;
+  }
+  90%, 100% {
+    background-color: rgb(234, 234, 234);
+  }
+}
+@keyframes trackBallSlide {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(-1rem);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(0.9) translateY 0.25rem;
+  }
+  14% {
+    opacity: 0;
+    transform: scale(0.4) translateY 2rem;
+  }
+  15%, 19% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-1rem);
+  }
+  28%, 29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-1rem);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-1rem);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(0.9) translateY 0.25rem;
+  }
+  44% {
+    opacity: 0;
+    transform: scale(0.4) translateY(2rem);
+  }
+  45%, 49% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-1rem);
+  }
+  58%, 59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-1rem);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) translateY(-1rem);
+  }
+  66% {
+    opacity: 1;
+    transform: scale(0.9) translateY 0.25rem;
+  }
+  74% {
+    opacity: 0;
+    transform: scale(0.4) translateY(2rem);
+  }
+  75%, 79% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-1rem);
+  }
+  88%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(-1rem);
+  }
+}
+@keyframes nudgeMouse {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0.5rem);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(0.5rem);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+@keyframes nudgeText {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0.125rem);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.125rem);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(0.125rem);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+@keyframes colorText {
+  21% {
+    color: #4e5559;
+  }
+  30% {
+    color: rgb(234, 234, 234);
+  }
+  51% {
+    color: #4e5559;
+  }
+  60% {
+    color: rgb(234, 234, 234);
+  }
+  81% {
+    color: #4e5559;
+  }
+  90% {
+    color: rgb(234, 234, 234);
+  }
+}
+
+/*# sourceMappingURL=mouse.css.map */

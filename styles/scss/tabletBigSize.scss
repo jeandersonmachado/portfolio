@@ -23,7 +23,6 @@
     pointer-events: none;
     z-index: 20000;
     transition: none;
-    display: none;
 }
 
 .about_me p:first-of-type {
@@ -31,4 +30,108 @@
     font-size: 7rem;
     font-family: "Grand";
     color: antiquewhite;
+}
+
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    top: 81% !important;
+    left: 50%;
+    opacity: 1;
+    transform: rotate(-90deg) translateX(-50%) !important;
+}
+
+#fp-nav ul li:first-of-type a span::before {
+    content: "01";
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#fp-nav ul li:nth-of-type(2) a span::before {
+    content: "02";
+    font-family: "Quicksand", sans-serif;
+    border-radius: 50%;
+    letter-spacing: 1px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#fp-nav ul li:nth-of-type(3) a span::before {
+    content: "03";
+    font-family: "Quicksand", sans-serif;
+    border-radius: 50%;
+    letter-spacing: 1px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+#fp-nav ul li:nth-of-type(4) a span::before {
+    content: "04";
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#fp-nav ul li a.active span::before {
+    color: rgb(255, 255, 255) !important;
+    transform: rotate(90deg) scale(1.7) !important;
+    // margin: 0 0 0 0;
+    transition: 0.5s ease;
+}
+
+#fp-nav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 0 !important;
+    position: relative;
+}
+
+.section_img_son > div {
+    position: relative;
+    top: 23%;
+    left: 60%;
+    width: 9rem;
+    height: auto;
+    margin-right: 1rem;
+}
+.section_img_son > div > p {
+    display: inline-block;
+    font-size: 3rem;
+    background-image: linear-gradient(90deg, rgba(146, 84, 156, 1) 0%, rgba(64, 49, 133, 1) 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.2rem;
 }

@@ -2,3 +2,9 @@
     top: $top;
     left: $left;
 }
+
+@mixin animation($delay) {
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 600ms ease-out $delay;
+    opacity: 1;
+}

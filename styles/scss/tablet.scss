@@ -1,3 +1,13 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5% 0 7%;
+    z-index: 999;
+    margin-top: 10px;
+}
+
 #cursorBorder {
     --size: 40px;
     position: absolute;
@@ -97,10 +107,33 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    // left: 23%;
     left: 0;
     align-items: center;
     justify-content: center;
+}
+.shadow_moon {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#moon__img_shadow {
+    position: fixed;
+    left: 55%;
+    top: 120px;
+    width: 300px;
+    height: 300px;
+    background-color: #352e4a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0.064), 0 0 0 4em rgba(255, 255, 255, 0.043),
+        0 0 0 6em rgba(255, 255, 255, 0.03), 0 0 0 8em rgba(255, 255, 255, 0.021), 0 0 0 10em rgba(255, 255, 255, 0.023),
+        0 0 0 12em rgba(255, 255, 255, 0.01);
 }
 
 #scene {
@@ -186,12 +219,6 @@ img {
 
 .fp-section.active .animatedmoon {
     transform: translate3d(0, 0, 0);
-    box-shadow: 0 0 0 2.5em rgba(255, 255, 255, 0.064),
-        0 0 0 5em rgba(255, 255, 255, 0.043),
-        0 0 0 7.5em rgba(255, 255, 255, 0.03),
-        0 0 0 10em rgba(255, 255, 255, 0.021),
-        0 0 0 12.5em rgba(255, 255, 255, 0.023),
-        0 0 0 15em rgba(255, 255, 255, 0.01);
 }
 
 .name_container {
@@ -245,4 +272,87 @@ img {
     color: antiquewhite;
     font-size: 1.5rem;
     animation: p 500ms ease 600ms;
+}
+
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    top: 81% !important;
+    left: 50%;
+    opacity: 1;
+    transform: rotate(-90deg) translateX(-50%) !important;
+}
+
+#fp-nav ul li:first-of-type a span::before {
+    content: "01";
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#fp-nav ul li:nth-of-type(2) a span::before {
+    content: "02";
+    font-family: "Quicksand", sans-serif;
+    border-radius: 50%;
+    letter-spacing: 1px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#fp-nav ul li:nth-of-type(3) a span::before {
+    content: "03";
+    font-family: "Quicksand", sans-serif;
+    border-radius: 50%;
+    letter-spacing: 1px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+#fp-nav ul li:nth-of-type(4) a span::before {
+    content: "04";
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#fp-nav ul li a.active span::before {
+    color: rgb(255, 255, 255) !important;
+    transform: rotate(90deg) scale(1.7) !important;
+    // margin: 0 0 0 0;
+    transition: 0.5s ease;
+}
+
+#fp-nav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 0 !important;
+    position: relative;
 }
